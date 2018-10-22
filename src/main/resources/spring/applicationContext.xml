@@ -13,25 +13,4 @@
          http://www.springframework.org/schema/aop
          http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="knight" class="com.springinaction.knights.BraveKnight">
-        <constructor-arg ref="quest" />
-    </bean>
-
-    <bean id="quest" class="com.springinaction.quests.SlayDragonQuest">
-        <constructor-arg value="#{T(System).out}" />
-    </bean>
-
-    <bean id="minstrel" class="com.springinaction.knights.Minstrel">
-        <constructor-arg value="#{T(System).out}" />
-    </bean>
-
-    <aop:config>
-        <aop:aspect ref="minstrel">
-            <aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))" />
-
-            <aop:before pointcut-ref="embark" method="singBeforeQuest" />
-
-            <aop:after pointcut-ref="embark" method="singAfterQuest" />
-        </aop:aspect>
-    </aop:config>
 </beans>
