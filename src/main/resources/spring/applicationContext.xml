@@ -14,4 +14,9 @@
          http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <context:component-scan base-package="com.springinaction.soundsystem" />
+
+    <bean id="blankDisc" class="com.springinaction.soundsystem.BlankDisc">
+        <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+        <constructor-arg value="The Beatles" />
+    </bean>
 </beans>
