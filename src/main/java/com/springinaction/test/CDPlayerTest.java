@@ -1,10 +1,6 @@
 package com.springinaction.test;
 
-import com.springinaction.config.CDPlayerConfig;
-import com.springinaction.soundsystem.BlankDisc;
-import com.springinaction.soundsystem.CompactDisc;
 import com.springinaction.soundsystem.MediaPlayer;
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
@@ -23,14 +19,6 @@ public class CDPlayerTest {
 
     @Autowired
     private MediaPlayer player;
-
-    @Autowired
-    private BlankDisc cd;
-
-    @Test
-    public void cdShouldNotBeNull(){
-        Assert.assertNotNull(cd);
-    }
 
     @Test
     public void play(){
