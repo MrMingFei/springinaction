@@ -14,8 +14,16 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
+        <fileset id="web application context" name="MVC application context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext.xml</file>
+        </fileset>
+        <fileset id="web appServlet servlet context" name="MVC appServlet servlet context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/appServlet-servlet.xml</file>
+        </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/springinaction/config/CDPlayerConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/myapp/config/DataSourcesConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/myapp/config/DessertConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext.xml</file>
         </fileset>
       </configuration>
