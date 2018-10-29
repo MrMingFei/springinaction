@@ -18,11 +18,22 @@
          http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
 
-    <context:component-scan base-package="com.springinaction.soundsystem" />
+    <!--<context:component-scan base-package="com.springinaction.soundsystem" />-->
+
+    <bean id="cdPlayer" class="com.springinaction.soundsystem.CDPlayer" />
 
     <bean id="blankDisc" class="com.springinaction.soundsystem.BlankDisc">
-        <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+        <constructor-arg value="XML. Pepper's Lonely Hearts Club Band" />
         <constructor-arg value="The Beatles" />
+        <constructor-arg>
+            <list>
+                <value>XML. Pepper's Lonely Hearts Club Band</value>
+                <value>With a Little Help from My Friends</value>
+                <value>Lucy in the Sky with Diamonds</value>
+                <value>Getting Better</value>
+                <value>Fixing a Hole</value>
+            </list>
+        </constructor-arg>
     </bean>
 
     <beans profile="dev">

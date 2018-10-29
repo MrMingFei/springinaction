@@ -1,5 +1,7 @@
 package com.springinaction.test;
 
+import com.springinaction.config.CDPlayerConfig;
+import com.springinaction.config.ExpressiveConfig;
 import com.springinaction.soundsystem.MediaPlayer;
 import org.junit.Rule;
 import org.junit.Test;
@@ -10,7 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = CDPlayerConfig.class)//java文件配置
+//@ContextConfiguration(classes = CDPlayerConfig.class)//jappava文件配置
+//@ContextConfiguration(classes = ExpressiveConfig.class)//java文件配置，传参数使用了app.properties
 @ContextConfiguration(locations = "classpath:spring/applicationContext.xml")//xml文件配置
 public class CDPlayerTest {
 
